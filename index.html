@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
+
+    <script src="scripts.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/849af03875.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Code By Charlotte</title>
+  </head>
+  <body>
+    <!--Nav Section-->
+    <!--End Nav Section-->
+    <!--Hero Section-->
+    <div class="hero" id="home">
+      <div class="hero-left">
+        <h3>Hi, I'm</h3>
+        <h1>Charlotte</h1>
+        <h3>Aspiring Front End Developer</h3>
+        <h3>From South Wales</h3>
+      </div>
+      <div class="hero-right">
+        <img src="images/desktopbackground.png" />
+      </div>
+    </div>
+
+    <!--End Hero Section-->
+
+    <section class="projects" id="projects">
+      <h2 class="heading"><span class="highlight">Projects</span></h2>
+      <h3>Projects Coming Soon</h3>
+
+      <div class="projects-grid">
+        <div class="project-card item-1">
+          <img src="images/project-1.png" alt="Project 1" />
+          <h3>Project One</h3>
+          <div class="project-buttons">
+            <button class="btn" onclick="location.href='#'">GitHub</button>
+            <button class="btn" onclick="location.href='#'">Demo</button>
+          </div>
+        </div>
+        <div class="project-card item-2">
+          <img src="images/project-2.png" alt="Project 1" />
+          <h3>Project Two</h3>
+          <div class="project-buttons">
+            <button class="btn" onclick="location.href='#'">GitHub</button>
+            <button class="btn" onclick="location.href='#'">Demo</button>
+          </div>
+        </div>
+        <div class="project-card item-3">
+          <img src="images/project-3.png" alt="Project 1" />
+          <h3>Project Three</h3>
+          <div class="project-buttons">
+            <button class="btn" onclick="location.href='#'">GitHub</button>
+            <button class="btn" onclick="location.href='#'">Demo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--About Section-->
+    <section class="about" id="about">
+      <h2 class="heading">About <span class="highlight">Me</span></h2>
+      <div class="about-content">
+        <div class="about-left">
+          <img src="images/about.png" alt="Illustration of Charlotte" />
+        </div>
+        <div class="about-right">
+          <p>
+            I'm Charlotte—a student working toward a certification in Front End
+            Development via
+            <a
+              href="https://www2.learningpeople.com/uk/course/skillsoft/front-end-plus/"
+              class="fancy-link"
+              title="Learning People Front End PLUS' Syllabus "
+              >The Learning People's Front End PLUS course.</a
+            >
+            My journey began with a degree in Music from Bangor University back
+            in 2009. From there, I developed a career in Customer Service and
+            Sales, all while maintaining the responsibilities of being a carer
+            within my family.
+          </p>
+          <br />
+          <p>
+            When a twist of fate led to the need for a career reboot, I drew
+            inspiration from my general exploration of coding over the
+            years—from toying with BASIC on my VTEC laptop and experiments with
+            HTML in the early days of the internet to more recent endeavors with
+            Twitch alerts. This, alongside valuable insights from industry
+            professionals, proved a pivotal compass in pointing me towards the
+            world of Front End Development.
+          </p>
+          <br />
+          <p>
+            Outside of my studies, I'm a gamer and a fan of the Final Fantasy
+            series, with FFX topping my list. But if you can't find me, I've
+            probably wandered off to Eorzea. Maybe I'm questing, amassing a gil
+            fortune, or simply checking out the latest fashions on those idling
+            in Limsa.
+          </p>
+          <br />
+          <p>
+            Upon achieving my certification in Front End Development, my journey
+            doesn't end—it's just beginning. I plan to delve deeper into my
+            studies, fueled by curiosity, and to stay abreast of the
+            ever-evolving landscape. Or, to put it another way, once I'm done
+            with this quest, it's time to move onto the next one!
+          </p>
+        </div>
+      </div>
+      <div class="skillset">
+        <h3>I have experience with:</h3>
+        <div class="skillset-icons">
+          <a href="#" title="HTML"><i class="fa-brands fa-html5"></i></a>
+          <a href="#" title="CSS"><i class="fa-brands fa-css3-alt"></i></a>
+          <a href="#" title="Javascript"
+            ><i class="fa-brands fa-square-js"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!--End About Section-->
+
+    <!--Contact Section-->
+    <section class="contact" id="contact">
+      <div class="contact-content">
+        <div class="contact-left">
+          <h2 class="heading">Contact <span class="highlight">Me</span></h2>
+          <p id="email-address">
+            <i class="fa-regular fa-envelope"></i> codebycharlotte@gmail.com
+          </p>
+          <div class="social-icons">
+            <a href="https://github.com/CodeByCharlotte" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/charlotte-w-0a50b729b/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="Email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="Message"
+              rows="6"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </section>
+    <!--End Contact Section-->
+  </body>
+</html>
