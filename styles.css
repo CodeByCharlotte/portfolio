@@ -173,20 +173,23 @@ p {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
 .project-card img {
   width: 30vw;
-  margin: 5px auto;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.project-card h3 {
-  margin: 10px 0;
-}
-
 .project-buttons {
   width: 75%;
-  margin: 0 auto;
+  margin: 5px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -407,6 +410,10 @@ form textarea {
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card h3 {
+    order: -1;
   }
 
   .item-1 {
