@@ -146,6 +146,7 @@ p {
   width: 95%;
   border-radius: 10px;
   object-fit: cover;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 /*Projects*/
 .projects {
@@ -176,6 +177,7 @@ p {
   width: 30vw;
   margin: 5px auto;
   border-radius: 10px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .project-card h3 {
@@ -209,6 +211,10 @@ p {
 .about-left {
   flex-basis: 35%;
   margin: 0 auto;
+}
+
+.about-left img {
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
 
 .about-right {
@@ -259,7 +265,7 @@ p {
 }
 
 .contact-content p {
-  margin: 1rem 0;
+  margin: 1rem;
 }
 
 .contact-left {
