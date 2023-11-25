@@ -109,8 +109,8 @@ p {
 /*Navigation*/
 /*Hero Section*/
 .hero {
-  height: 100dvh;
-  height: 100vh;
+  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
