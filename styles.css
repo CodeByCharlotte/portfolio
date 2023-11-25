@@ -180,16 +180,18 @@ p {
   align-items: center;
   gap: 5px;
 }
-
 .project-card img {
   width: 30vw;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+.project-card h3 {
+  margin-top: 5px;
+}
+
 .project-buttons {
   width: 75%;
-  margin: 5px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -414,6 +416,10 @@ form textarea {
 
   .project-card h3 {
     order: -1;
+  }
+
+  .project-buttons {
+    margin-top: 10px;
   }
 
   .item-1 {
