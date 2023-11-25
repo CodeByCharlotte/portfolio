@@ -19,7 +19,6 @@
 }
 
 html {
-  font-size: 62.5%;
   overflow-x: hidden;
 }
 
@@ -36,18 +35,17 @@ img {
 }
 
 section {
-  padding: 10rem 9%;
+  padding: 100px 9%;
   margin: 0 auto;
 }
 
 .btn {
   border: 1px solid var(--text);
-  border-radius: 0.6rem;
+  border-radius: 6px;
   background: none;
-  padding: 1rem 2rem;
-  font-size: 2rem;
+  padding: 10px 20px;
+  font-size: 20px;
   cursor: pointer;
-  margin: 1rem;
   color: var(--text);
   position: relative;
   overflow: hidden;
@@ -87,19 +85,23 @@ section {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 3.5rem;
+  font-size: clamp(3.5rem, 2.95rem + 2.75vw, 6.25rem);
 }
 
 h2 {
-  font-size: 4.5rem;
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
 }
 
 h3 {
-  font-size: 2.6rem;
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.75rem);
 }
 
 p {
-  font-size: 1.8rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
 }
 
 .highlight {
@@ -109,11 +111,12 @@ p {
 /*Navigation*/
 /*Hero Section*/
 .hero {
-  height: 100dvh;
-  height: 100vh;
+  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .hero-left {
@@ -141,7 +144,7 @@ p {
 
 .hero-right img {
   width: 95%;
-  border-radius: 1rem;
+  border-radius: 10px;
   object-fit: cover;
 }
 /*Projects*/
@@ -163,20 +166,20 @@ p {
 }
 
 .projects-grid {
-  margin-top: 3rem;
+  margin-top: 3px;
   display: grid;
-  gap: 3rem;
+  gap: 30px;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .project-card img {
   width: 30vw;
-  margin: 0.5rem auto;
-  border-radius: 1rem;
+  margin: 5px auto;
+  border-radius: 10px;
 }
 
 .project-card h3 {
-  margin-top: 1rem;
+  margin: 10px 0;
 }
 
 .project-buttons {
@@ -185,7 +188,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 10px;
 }
 
 /*End Projects*/
@@ -222,12 +225,12 @@ p {
 }
 
 .skillset {
-  padding-top: 1rem;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 10px;
 }
 
 .skillset h3 {
@@ -236,8 +239,9 @@ p {
 }
 
 .skillset a {
-  margin: 2rem;
-  font-size: 7rem;
+  margin: 20px;
+  font-size: 3rem;
+  font-size: clamp(3rem, 2.725rem + 1.375vw, 4.375rem);
   color: var(--text);
 }
 /*End About*/
@@ -247,16 +251,15 @@ p {
 .contact-content {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 20px;
 }
 
 .contact-content h2 {
   line-height: 1.2;
 }
 
-#email-address {
-  font-size: 2rem;
-  margin: 3rem 0 3rem;
+.contact-content p {
+  margin: 1rem 0;
 }
 
 .contact-left {
@@ -268,9 +271,9 @@ p {
 }
 
 .contact-left .fa-regular {
-  margin-left: 0.5rem;
+  margin-left: 5px;
   color: var(--accent);
-  font-size: 2.4rem;
+  font-size: 24px;
   display: inline-block;
 }
 
@@ -278,17 +281,17 @@ p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 20px;
 }
 
 .social-icons a {
-  width: 10rem;
-  height: 10rem;
+  width: 100px;
+  height: 100px;
   text-align: center;
   text-decoration: none;
   color: var(--text-color);
-  box-shadow: 0 0 20px 1.25rem rgba(0, 0, 0, 0.1);
-  margin: 0 1.88rem;
+  box-shadow: 0 0 20px 12.5px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
@@ -297,8 +300,8 @@ p {
 }
 
 .social-icons a .fa-brands {
-  font-size: 5rem;
-  line-height: 10rem;
+  font-size: 50px;
+  line-height: 100px;
   position: relative;
   z-index: 10;
   transition: color 0.5s;
@@ -308,7 +311,7 @@ p {
   content: "";
   width: 100%;
   height: 100%;
-  top: -11rem;
+  top: -110px;
   left: 0;
   background: linear-gradient(-45deg, var(--secondary), var(--accent));
   position: absolute;
@@ -332,16 +335,16 @@ form textarea {
   width: 100%;
   margin: 0 auto;
   border: 0;
-  padding: 1.5rem;
-  margin: 1rem 0;
+  padding: 15px;
+  margin: 10px 0;
   color: var(--text);
-  font-size: 1.8rem;
-  border-radius: 0.6rem;
+  font-size: 18px;
+  border-radius: 6px;
 }
 
 #msg {
   color: var(--accent);
-  font-size: 1.8rem;
+  font-size: 18px;
   display: block;
   text-align: center;
 }
@@ -350,12 +353,8 @@ form textarea {
 
 /*Media Queries*/
 @media (max-width: 1200px) {
-  html {
-    font-size: 55%;
-  }
-
   section {
-    padding: 3rem 3%;
+    padding: 24px 3%;
   }
 
   .hero {
@@ -380,22 +379,22 @@ form textarea {
   .item-2 img,
   .item-3 img {
     width: 100%;
-    margin: 0.5rem auto;
+    margin: 5px auto;
   }
 
   .item-1 img {
     width: 100%;
-    margin: 0.5rem auto;
+    margin: 5px auto;
   }
 
   .projects-grid {
-    gap: 2rem;
+    gap: 20px;
   }
 }
 
 @media (max-width: 991px) {
   .contact-left .fa-regular {
-    font-size: 2rem;
+    font-size: 20px;
   }
 }
 
@@ -429,10 +428,6 @@ form textarea {
     flex-direction: column-reverse;
   }
 
-  .skillset a {
-    font-size: 4rem;
-  }
-
   .contact-content {
     align-items: center;
     flex-direction: column;
@@ -444,17 +439,17 @@ form textarea {
 
   .contact-left .fa-regular {
     color: var(--accent);
-    font-size: 3rem;
+    font-size: 30px;
   }
 
   .social-icons a {
-    width: 6rem;
-    height: 6rem;
+    width: 50px;
+    height: 50px;
   }
 
   .social-icons a .fa-brands {
-    font-size: 3rem;
-    line-height: 6rem;
+    font-size: 30px;
+    line-height: 50px;
   }
 
   .contact-right {
