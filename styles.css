@@ -34,6 +34,10 @@ img {
   font-style: italic;
 }
 
+ul {
+  list-style: none;
+}
+
 section {
   padding: 100px 9%;
   margin: 0 auto;
@@ -43,8 +47,9 @@ section {
   border: 1px solid var(--text);
   border-radius: 6px;
   background: none;
-  padding: 10px 20px;
-  font-size: 20px;
+  padding: 1em;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
   cursor: pointer;
   color: var(--text);
   position: relative;
@@ -109,8 +114,69 @@ p {
 }
 
 /*Navigation*/
+.navmenu {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.navmenu ul {
+  padding-left: 50px;
+  position: relative;
+  opacity: 0.6;
+}
+
+.navmenu ul:hover {
+  opacity: 1;
+}
+
+.navmenu ul::after {
+  content: " ";
+  position: absolute;
+  width: 5px;
+  height: 95%;
+  left: 40px;
+  top: 8px;
+  background: linear-gradient(to bottom, var(--secondary), var(--accent));
+  z-index: -1;
+}
+
+.navmenu ul li {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.navmenu ul li a {
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+  font-size: 0.3rem;
+  line-height: 0.3rem;
+  color: transparent;
+}
+
+.navmenu ul li a::before {
+  content: "";
+  position: absolute;
+  background: var(--background);
+  width: 10px;
+  height: 10px;
+  left: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 4px solid rgb(208, 179, 251);
+  transition: background 2ms;
+}
+
+.navmenu ul li a.active::before {
+  background: linear-gradient(-45deg, var(--secondary), var(--accent));
+}
 /*Hero Section*/
 .hero {
+  margin: 0;
+  padding: 0;
   min-height: 100dvh;
   min-height: 100vh;
   display: flex;
@@ -244,15 +310,18 @@ p {
   gap: 10px;
 }
 
+.skillset-icons {
+  display: flex;
+  gap: 2rem;
+}
 .skillset h3 {
   color: var(--accent);
   text-align: center;
 }
 
 .skillset a {
-  margin: 20px;
-  font-size: 3rem;
-  font-size: clamp(3rem, 2.725rem + 1.375vw, 4.375rem);
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 2.1rem + 2vw, 4.5rem);
   color: var(--text);
 }
 /*End About*/
@@ -364,10 +433,6 @@ form textarea {
 
 /*Media Queries*/
 @media (max-width: 1200px) {
-  section {
-    padding: 24px 3%;
-  }
-
   .hero {
     flex-direction: column;
   }
@@ -375,6 +440,7 @@ form textarea {
   .hero-right img {
     width: 100%;
     border-radius: 0;
+    box-shadow: 0px 0px 0px 0px;
   }
 
   .projects-grid {
@@ -410,6 +476,18 @@ form textarea {
 }
 
 @media (max-width: 768px) {
+  section {
+    padding: 20px 9%;
+  }
+
+  .navmenu {
+    right: -35px;
+  }
+
+  .projects {
+    padding-top: 0;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -445,6 +523,7 @@ form textarea {
   .about-content {
     justify-content: center;
     flex-direction: column-reverse;
+    text-align: center;
   }
 
   .contact-content {
