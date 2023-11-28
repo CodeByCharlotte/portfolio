@@ -16,7 +16,10 @@ A contact section with a form for users to reach out.
 ## Contact Information
 Email: codebycharlotte@gmail.com
 ## Functionality
+### Contact Me
 The contact section functionality is implemented using [form-to-google-sheets](https://github.com/jamiewilson/form-to-google-sheets). This allows me to collect and manage inquiries efficiently.
+### Dark Mode
+My first attempt at using dark mode has been achieved following the tutorial by [Kevin Powell](https://www.youtube.com/watch?v=wodWDIdV9BY).
 
 ## Future Adjustments
 The website is designed with a responsive layout. As I progress through my front-end developer course, I plan to continue improving the site. This includes:
