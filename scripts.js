@@ -42,36 +42,32 @@ darkModeToggle.addEventListener("click", () => {
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("nav ul li a");
 
+function setActiveNavLink(id) {
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+  });
+  document.querySelector(`nav ul li a[href*=${id}]`).classList.add("active");
+}
+
 window.onscroll = () => {
-  sections.forEach((sec, index) => {
-    let top = window.scrollY;
+  let top = window.scrollY + window.innerHeight / 2;
+
+  sections.forEach((sec) => {
     let offset = sec.offsetTop;
     let height = sec.offsetHeight;
     let id = sec.getAttribute("id");
 
-    // Check if it's the last section and we are near the bottom of the page
-    if (index === sections.length - 1) {
-      let pageBottom = offset + height;
-      if (top + window.innerHeight >= pageBottom - height / 2) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-        });
-        document
-          .querySelector("nav ul li a[href*=" + id + "]")
-          .classList.add("active");
-      }
-    } else {
-      // For other sections
-      if (top + window.innerHeight / 2 >= offset && top < offset + height) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-        });
-        document
-          .querySelector("nav ul li a[href*=" + id + "]")
-          .classList.add("active");
-      }
+    // Check if the scroll position is within the current section
+    if (top >= offset && top <= offset + height) {
+      setActiveNavLink(id);
     }
   });
+
+  // Check if at the bottom of the page
+  let isAtBottom = top >= document.body.offsetHeight - window.innerHeight / 2;
+  if (isAtBottom) {
+    setActiveNavLink(sections[sections.length - 1].getAttribute("id"));
+  }
 };
 
 /*Contact Form To Google Sheets*/
