@@ -12,9 +12,17 @@
 
 :root {
   --text: rgb(70, 38, 115);
-  --background: rgb(252, 240, 254);
-  --primary: rgb(174, 195, 251);
-  --secondary: rgb(208, 179, 251);
+  --background: rgb(252, 241, 254);
+  --primary: rgb(146, 63, 117);
+  --secondary: rgb(207, 177, 251);
+  --accent: rgb(144, 11, 168);
+}
+
+.darkmode {
+  --text: rgb(172, 140, 217);
+  --background: rgb(6, 0, 15);
+  --primary: rgb(215, 15, 250);
+  --secondary: rgb(49, 2, 30);
   --accent: rgb(221, 87, 244);
 }
 
@@ -111,6 +119,22 @@ p {
 
 .highlight {
   color: var(--accent);
+}
+
+/*Dark Mode Toggle*/
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 1em;
+  color: var(--foreground);
+  border: 2px solid currentColor;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
 }
 
 /*Navigation*/
