@@ -12,7 +12,7 @@ window.onscroll = () => {
     // Check if it's the last section and we are near the bottom of the page
     if (index === sections.length - 1) {
       let pageBottom = offset + height;
-      if (top >= offset || top + window.innerHeight >= pageBottom) {
+      if (top + window.innerHeight >= pageBottom - height / 2) {
         navLinks.forEach((link) => {
           link.classList.remove("active");
         });
@@ -22,7 +22,7 @@ window.onscroll = () => {
       }
     } else {
       // For other sections
-      if (top >= offset && top < offset + height) {
+      if (top + window.innerHeight / 2 >= offset && top < offset + height) {
         navLinks.forEach((link) => {
           link.classList.remove("active");
         });
