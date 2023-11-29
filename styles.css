@@ -6,7 +6,6 @@
   box-sizing: border-box;
   text-decoration: none;
   border: none;
-  outline: none;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
@@ -25,6 +24,14 @@
   --primary: rgb(215, 15, 250);
   --secondary: rgb(49, 2, 30);
   --accent: rgb(221, 87, 244);
+}
+
+*:focus {
+  outline: 2px solid var(--text);
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
 }
 
 html {
