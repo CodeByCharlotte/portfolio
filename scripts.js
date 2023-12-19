@@ -1,4 +1,4 @@
-/*Dark Mode With Local Storage*/
+//Dark Mode With Local Storage//
 // check for saved 'darkMode' in localStorage
 let darkMode = localStorage.getItem("darkMode");
 
@@ -38,7 +38,7 @@ darkModeToggle.addEventListener("click", () => {
   }
 });
 
-/*Vertical Navigation Bar*/
+//Vertical Navigation Bar//
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("nav ul li a");
 
@@ -70,7 +70,7 @@ window.onscroll = () => {
   }
 };
 
-/*Contact Form To Google Sheets*/
+//Contact Form To Google Sheets//
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbw66vy2e7KQi8OzvCajRAshffD3fMG9n8wnSENF9qZrzS8uDAnWPpxbkNOr6mRR3nugQw/exec";
 const form = document.forms["submit-to-google-sheet"];
